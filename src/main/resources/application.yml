@@ -1,0 +1,50 @@
+#config目录下的配置文件优先级高于resources目录下的配置文件
+#
+pirates:
+  name: 白胡子
+  age: 72
+  teammates:
+    - 马尔科
+    - 艾斯
+    - 乔兹
+
+user: zoubobo
+
+student:
+  name: 杨明
+
+spring:
+  profiles:
+    active: ${profile.env}
+
+
+
+---
+#开发环境
+spring:
+  config:
+    activate:
+      on-profile: dev
+
+server:
+  port: 80
+---
+#生产环境
+spring:
+  config:
+    activate:
+      on-profile: pro
+
+server:
+  port: 1314
+
+---
+#测试环境
+spring:
+  config:
+    activate:
+      on-profile: test
+
+server:
+  port: 80
+---
