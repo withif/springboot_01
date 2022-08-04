@@ -19,7 +19,7 @@ public class Withtry {
     @RequestMapping("/getValues")
     public Object try1(){
 //        System.out.println(user);
-//        System.out.println(stuName);
+        System.out.println(stuName);
         return pirates;
     }
 }
